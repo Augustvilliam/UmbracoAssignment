@@ -1,0 +1,29 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	var content = (ContentModels.ServiceSection)Model.Content;
+	var settings = Model.Settings as ContentModels.ServiceSettings;
+
+	var sectionColor = settings?.ServiceBgColor?.Color ?? "#fffffff";
+}
+
+<section>
+	<div>
+		<div>
+			@if(settings!.ShowServiceLable)
+			{
+				<h2>@content.ServiceLable</h2>
+			}
+			<div>@Html.Raw(content.ServiceTitle)</div>
+		</div>
+		<div>
+			<div>
+				<a href="#">
+					<h4>Risk Management</h4>
+					<img src="~/Images/image1.svg"/>
+					<p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
