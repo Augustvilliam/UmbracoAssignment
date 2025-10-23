@@ -1,0 +1,21 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+
+    Layout = null;
+
+    var pageTitle = !string.IsNullOrEmpty(Model.Name) ? $"Ontarix | {Model.Name}" : "Onatrix";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, intiial-scale=1.0">
+    <title>@pageTitle</title>
+    <link href="~/css/Styles.css" rel="stylesheet"/>
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>
