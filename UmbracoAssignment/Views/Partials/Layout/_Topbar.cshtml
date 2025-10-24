@@ -1,0 +1,50 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+	var rootContent = Umbraco.ContentAtRoot();
+	var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+	var contactAdress = siteSettings?.ContactAdress ?? "No adress added.";
+
+}
+
+
+<div class="bg-green">
+	<div class="container top-bar">
+		<p class="font-Topbar">
+			@contactAdress
+		</p>
+
+		<div>
+			@if(siteSettings?.PlatformList != null)
+			{
+				foreach(var item in siteSettings.PlatformList)
+				{
+					if(item.Content is SocialMediaItem mediaItem)
+					{
+						switch(mediaItem.PlatformName!.ToLower())
+						{
+							case "facebook":
+								<a class="btn-social" href="@mediaItem.PlatformAccountUrl" target="_blank">
+									<i class="fa-brands fa-facebook-f"></i>
+									</a>
+								break;
+
+							case "shitter":
+								<a class="btn-social" href="@mediaItem.PlatformAccountUrl" target="_blank">
+									<i class="fa-brands fa-twitter"></i>
+								</a>
+								break;
+
+							case "linkedin":
+								<a class="btn-social" href="@mediaItem.PlatformAccountUrl" target="_blank">
+									<i class="fa-brands fa-linkedin-in"></i>
+								</a>
+								break;
+
+						}
+					}
+				}
+			}
+		</div>
+	</div>
+</div>

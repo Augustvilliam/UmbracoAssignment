@@ -3,16 +3,23 @@
 @{
     var content = (ContentModels.HeroSection)Model.Content;
 }
-
-<h1>@content.HeroTitle</h1>
-
-@Html.Raw(content.HeroText)
-
-@if (content.HeroLink != null)
-{
-	<a href="@content.HeroLink.Url">@content.HeroLink.Name</a>
-}
 @if (@content.HeroBgImg != null)
 {
-	<img src="@content.HeroBgImg.Url()" />
+	<img class="hero-bg-img" src="@content.HeroBgImg.Url()" />
 }
+<div class="container ">
+	<div class="hero-container">
+		<h1 class="font-head">@content.HeroTitle</h1>
+
+		@Html.Raw(content.HeroText)
+
+		@if (content.HeroLink != null)
+		{
+			<a class="btn btn-contact" href="@content.HeroLink.Url">@content.HeroLink.Name</a>
+		}
+
+	</div>
+
+
+</div>
+

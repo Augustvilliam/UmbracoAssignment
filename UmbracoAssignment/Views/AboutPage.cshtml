@@ -3,5 +3,10 @@
 @{
 	Layout = "mainLayout.cshtml";
 }
+<partial name="Partials/Layout/_PageHeader" model="(IPageHeader)Model" />
 
-@Html.GetBlockListHtml(Model.Sections)
+<section>
+	<div class="container">
+		@Html.GetBlockListHtml(Model.Sections)
+	</div>
+</section>
