@@ -24,14 +24,50 @@ a, button, ul, li {
     --clr-white: #FFFFFF;
     --clr-bg-secondary: #F7F7F7;
     --clr-border: #EBEBEB;
+
     --font-size-xs: 14px;
     --font-size-s: 16px;
     --font-size-m: 22px;
     --font-size-l: 40px;
     --font-size-xl: 70px;
+
+    --font-reg: 400;
+    --font-semi: 600;
+    --font-bold: 800;
+}
+.rte-s{
+    font-size:var(--font-size-xs)
+}
+.rte-m {
+    font-size: var(--font-size-m)
+}
+.rte-l {
+    font-size: var(--font-size-l)
+}
+.rte-reg{
+    font-weight:var(--font-reg)
+}
+.rte-semi {
+    font-weight: var(--font-semi)
+}
+.rte-bold {
+    font-weight: var(--font-bold)
+}
+
+
+
+
+
+
+
+
+
+
+.active{
+    color:var(--clr-sub3);
 }
 .rte {
-    padding-bottom:2rem;
+    padding-bottom: 2rem;
 }
 .container{
     width:1200px;

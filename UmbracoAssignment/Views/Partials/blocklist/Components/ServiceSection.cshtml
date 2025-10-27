@@ -5,6 +5,13 @@
 	var settings = Model.Settings as ContentModels.ServiceSettings;
 
 	var sectionColor = settings?.ServiceBgColor?.Color ?? "#fffffff";
+
+
+	var current = Umbraco.AssignedContentItem;
+	var siteRoot = current.Root();
+
+	var servicePage = siteRoot?.Children<ServicePage>()?.FirstOrDefault();
+	var items = servicePage?.Children<ServiceDetail>()?.OrderByDescending(x => x.CreateDate).ToList() ?? [];
 }
 
 <section class="bg-grey">
@@ -16,14 +23,30 @@
 			}
 			<div class="rte font-sub-l">@Html.Raw(content.ServiceTitle)</div>
 		</div>
-		<div>
-			<div class="card-container">
-				<a class="service-card" href="#">
-					<h4 class="service-head font-card-head">Risk Management</h4>
-					<img class="service-img" src="~/Images/image1.svg"/>
-					<p class="service-text font-text">Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
-				</a>
-			</div>
+
+
+
+		<div class="card-container">
+
+		 @if (items.Any())
+			{
+				@foreach(var item in items)
+				{
+
+
+					<a class="service-card" href="@item.Url()">
+						<h4 class="service-head font-card-head">@item.Name</h4>
+						<img class="service-img" src="@(item.ServiceDetalThumbnail?.Url() ?? "~/images/01.svg")" />
+						<p class="service-text font-text">@item.ServiceDetailExcerpt</p>
+					</a>
+				}
+			}
+			else
+			{
+				<p>No services found</p>
+			}
+
 		</div>
+
 	</div>
 </section>
