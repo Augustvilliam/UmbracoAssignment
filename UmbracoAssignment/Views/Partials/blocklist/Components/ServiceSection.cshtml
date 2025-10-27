@@ -7,21 +7,21 @@
 	var sectionColor = settings?.ServiceBgColor?.Color ?? "#fffffff";
 }
 
-<section>
-	<div>
-		<div>
+<section class="bg-grey">
+	<div class="container service-container">
+		<div class="text-center">
 			@if(settings!.ShowServiceLable)
 			{
-				<h2>@content.ServiceLable</h2>
+				<h2 class="font-badge">@content.ServiceLable</h2>
 			}
-			<div>@Html.Raw(content.ServiceTitle)</div>
+			<div class="rte font-sub-l">@Html.Raw(content.ServiceTitle)</div>
 		</div>
 		<div>
-			<div>
-				<a href="#">
-					<h4>Risk Management</h4>
-					<img src="~/Images/image1.svg"/>
-					<p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
+			<div class="card-container">
+				<a class="service-card" href="#">
+					<h4 class="service-head font-card-head">Risk Management</h4>
+					<img class="service-img" src="~/Images/image1.svg"/>
+					<p class="service-text font-text">Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
 				</a>
 			</div>
 		</div>

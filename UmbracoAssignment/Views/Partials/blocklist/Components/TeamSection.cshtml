@@ -2,6 +2,20 @@
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
     var content = (ContentModels.TeamSection)Model.Content;
+    var teamList = content.TeamMemberList;
 }
 
-@Html.GetBlockListHtml(content.TeamMemberList)
+
+<div class="card-grid">
+    @if (teamList != null)
+    {
+        for(var i = 0; i < teamList.Count; i++)
+        {
+            var member = teamList[i];
+            
+            <div class="member-card">
+                <partial name="Partials/Blocklist/Components/TeamMember" model="member" />
+            </div>
+        }
+    }
+</div>
