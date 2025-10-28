@@ -1,0 +1,52 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ContactSection)Model.Content;
+    var settings = Model.Settings as ContentModels.ContactSettings;
+
+    var sectionColor = settings?.BgColor?.Color ?? "#ffffff";
+
+}
+
+<section style="@sectionColor">
+    <div>
+        
+    </div>
+    <div class="container contact-container">
+        <div>
+            @if (@content.ConactImg != null)
+            {
+                <img class="hero-bg-img" src="@content.ConactImg.Url()" />
+            }
+        </div>
+
+        <div class="info-container">
+            <div class="contact-width">
+                <div> 
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Office location</p>
+                </div>
+                 <p>@content.ContactAdress</p>
+            </div>
+
+            <div class="contact-width">
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <p>Phone number</p>
+                </div>
+                <p>@content.ContactPhone</p>
+            </div>
+
+            <div class="contact-width">
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>E-mail address</p>
+                </div>
+                <p>@content.ContactEmail</p>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>

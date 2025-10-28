@@ -1,0 +1,128 @@
+﻿{
+    "name": "Onatrix Rte",
+    "alias": "Onatrix.Rte",
+    "extensions": [
+        {
+            "type": "tiptapToolbarExtension",
+            "kind": "styleMenu",
+            "alias": "Onatrix.Tiptap.StyleMenu",
+            "name": "Onatrix Tiptap Style Menu",
+            "meta": {
+                "alias": "onatrixStyleMenu",
+                "icon": "icon-palette",
+                "label": "Onatrix styles"
+            },
+            "items": [
+                {
+                    "label": "Paragraphs",
+                    "items": [
+                        {
+                            "label": "Large",
+                            "items": [
+                                {
+                                    "label": "Regular",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-l rte-reg"
+                                    }
+                                },
+                                {
+                                    "label": "Semi-Bold",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-l rte-semi"
+                                    }
+                                },
+                                {
+                                    "label": "Bold",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-l rte-bold"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Medium",
+                            "items": [
+                                {
+                                    "label": "Regular",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-m rte-reg"
+                                    }
+                                },
+                                {
+                                    "label": "Semi-Bold",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-m rte-semi"
+                                    }
+                                },
+                                {
+                                    "label": "Bold",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-m rte-bold"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Small",
+                            "items": [
+                                {
+                                    "label": "Regular",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-s rte-reg"
+                                    }
+                                },
+                                {
+                                    "label": "Semi-Bold",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-s rte-semi"
+                                    }
+                                },
+                                {
+                                    "label": "Bold",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-s rte-bold"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "label": "— Reset paragraph —",
+                            "data": { "tag": "p" },
+                            "separatorAfter": true
+                        }
+                    ]
+                },
+                {
+                    "label": "Attributes",
+                    "items": [
+                        {
+                            "label": "Add class .foo",
+                            "data": { "class": "foo" }
+                        },
+                        {
+                            "label": "Set id #bar",
+                            "data": { "id": "bar" }
+                        },
+                        {
+                            "label": "Span .foo#bar",
+                            "data": {
+                                "tag": "span",
+                                "class": "foo",
+                                "id": "bar"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
