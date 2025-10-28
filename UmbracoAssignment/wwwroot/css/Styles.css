@@ -122,12 +122,19 @@ footer{
 .service-container {
     padding-top: 4rem;
 }
-.contact-container{
+.partner-container{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    gap:3rem;
+}
+.contact-container {
     display: grid;
-    grid-template-columns:1fr 1fr;
-    height:fit-content;
-    height:715px;
-    padding-top:4rem;
+    grid-template-columns: 1fr 1fr;
+    height: fit-content;
+    height: 715px;
+    padding-top: 4rem;
 }
 .info-container{
     display:flex;
@@ -298,9 +305,13 @@ footer{
     align-items:center;
     justify-content:center;
 }
-.member-card{
-    border:1px solid var(--clr-border);
-    max-width:370px;
+
+.partner-card {
+    margin:2rem;
+}
+.member-card {
+    border: 1px solid var(--clr-border);
+    max-width: 370px;
     img{
            max-width:368px;
            display:flex;
