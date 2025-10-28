@@ -12,10 +12,16 @@
 				@Html.GetBlockListHtml(Model.ServiceDetailsAsides)
 			</aside>
 
-			<div>Content HERE!!</div>
+			<div>Content HERE!!
+				<div>
+					@Html.Raw(Model.ServiceDetalBody)
+				</div>
+			</div>
 
 
 
 		</div>
 	</div>
 </section>
+
+@Html.GetBlockListHtml(Model.ContactContent)
