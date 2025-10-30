@@ -1,9 +1,10 @@
 ﻿@using UmbracoAssignment.ViewModels
 @model CallbackFormViewModel
 
-@using (Html.BeginUmbracoForm("HandleCallbackForm", "Form", FormMethod.Post, new{novalidate = "novalidate", id= "callbackForm"}))
+@using (Html.BeginUmbracoForm("HandleCallbackForm", "Form", FormMethod.Post, new { novalidate = "novalidate", id = "mapCallbackForm" }))
 {
-	<div class="form">
+	<div class="form-l">
+
 		<div class="form-input">
 			<label class="sr-only" asp-for="Name"></label>
 			<input class="input" asp-for="Name" type="text" id="name" placeholder="@Html.DisplayNameFor(x => x.Name)" />
