@@ -83,7 +83,11 @@ a, button, ul, li {
     font-weight: var(--font-bold)
 }
 
-
+.map-height{
+    height:865px;
+    margin-bottom:4rem;
+    display:flex;
+}
 
 
 
@@ -188,6 +192,12 @@ footer{
     gap:3rem;
     padding:3rem 0;
 }
+.cto-map-container {
+
+    display:flex;
+    align-self:end;
+
+}
 .form-container {
     padding: 1rem;
     display: flex;
@@ -253,8 +263,15 @@ footer{
 .bg-dark{
     background:var(--clr-black);
 }
-.shadow{
-    box-shadow:var(--form-shadow);
+.map-bg {
+    position: absolute;
+    z-index: -1;
+    margin-top: 1.5rem;
+
+    
+}
+.shadow {
+    box-shadow: var(--form-shadow);
 }
 .current {
     color:var(--clr-sub3);
@@ -366,6 +383,7 @@ footer{
     img{
            max-width:368px;
            display:flex;
+
        }
 }
 
@@ -377,6 +395,11 @@ footer{
     gap:1rem;
     align-items:center;
     justify-content:center;
+    background:var(--clr-white);
+}
+.form-l {
+    width: 100%;
+
 }
 .cto-body{
     text-align:start;
@@ -392,6 +415,16 @@ footer{
     text-align: start;
 
 }
+.map-head {
+    background: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width:500px;
+    margin-top:2rem;
+}
+
 .form-head {
     color: var(--clr-sub1);
     font-size: 30px;
@@ -401,6 +434,25 @@ footer{
     font-style:italic;
     font-size:13px;
 }
+.map-title {
+    color: var(--clr-sub1);
+    font-weight: var(--font-bold);
+    font-size: var(--font-size-s);
+    text-align:center;
+}
+.map-lab {
+    color: var(--clr-primary);
+    font-weight: var(--font-bold);
+    font-size: var(--font-size-l);
+    text-align: center;
+}
+.map-desc {
+    color: var(--clr-body-text);
+    font-weight: var(--font-reg);
+    font-size: var(--font-size-xs);
+    text-align: center;
+}
+
 .card-grid {
     display: grid;
     gap: 1rem;

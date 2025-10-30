@@ -1,0 +1,54 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoAssignment.ViewModels
+@{
+    var content = (ContentModels.MapCallbackSection)Model.Content;
+    var settings = Model.Settings as ContentModels.MapCallbackSettings;
+
+
+    var formViewModel = new CallbackFormViewModel
+    {
+        Options = settings?.CallbackOptions ?? []
+    };
+}
+
+<section class="map-height">
+    <div>
+
+        @if (content.CallbackFormBg != null)
+        {
+            <img class="map-bg" src="@content.CallbackFormBg.Url()" alt="Deta e bild ja" />
+        }
+
+    </div>
+    <div class="container cto-map-container">
+        <div class="cto-form form-l shadow">
+
+            <div class="map-head form-head rte-bold">
+                <p class="map-title">@content.CallbackFormTitle</p>
+                <h2 class="map-lab">@content.CallbackFormLable</h2>
+                <p class="map-desc">@content.CallbackFormDesc</p>
+            </div>
+
+
+            <div class="form-container">
+                <partial name="Partials/Forms/_MapCallbackForm" model="formViewModel" />
+
+                @if (TempData["FormSuccess"] != null)
+                {
+                    <div class="success-msg">
+                        @TempData["FormSuccess"]
+                    </div>
+                }
+                else if (TempData["FormError"] != null)
+                {
+                    <div class="error-msg">
+                        @TempData["FormError"]
+                    </div>
+                }
+
+            </div>
+
+        </div>
+    </div>
+</section>
