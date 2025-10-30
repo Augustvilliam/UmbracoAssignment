@@ -19,9 +19,25 @@
             <div class="cto-head form-head rte-bold">
                 <p>@content.CallbackFormTitle</p>
             </div>
+
             <p class="form-desc">@content.CallbackFormDesc</p>
+
             <div class="form-container">
                 <partial name="Partials/Forms/_CallbackForm" model="new CallbackFormViewModel()" />
+
+                @if (TempData["FormSuccess"] != null)
+                {
+                    <div class="success-msg">
+                        @TempData["FormSuccess"]
+                    </div> 
+                }
+                else if (TempData["FormError"] != null)
+                {
+                    <div class="error-msg">
+                        @TempData["FormError"]
+                    </div>
+                }
+
             </div>
         </div>
     </div>
