@@ -7,18 +7,18 @@
 		<div class="form-input">
 			<label class="sr-only" asp-for="Name"></label>
 			<input class="input" asp-for="Name" type="text" id="name" placeholder="@Html.DisplayNameFor(x => x.Name)" />
-			<span></span>
+			<span asp-validation-for="Name"></span>
 		</div>
 		<div class="form-input">
 			<label class="sr-only" asp-for="Email"></label>
 			<input class="input" asp-for="Email" type="email" id="email" placeholder="@Html.DisplayNameFor(x => x.Email)" />
-			<span></span>
+			<span asp-validation-for="Email"></span>
 
 		</div>
 		<div class="form-input">
 			<label class="sr-only" asp-for="Phone"></label>
 			<input class="input" asp-for="Phone" type="tel" id="phone" placeholder="@Html.DisplayNameFor(x => x.Phone)" />
-			<span></span>
+			<span asp-validation-for="Phone"></span>
 
 		</div>
 		<div class="form-input">
