@@ -5,9 +5,7 @@
 }
 <partial name="Partials/Layout/_PageHeader" model="(IPageHeader)Model" />
 
-<section>
-	<div class="container">
-		@Html.GetBlockListHtml(Model.Sections)
-	</div>
-</section>
+
+@Html.GetBlockListHtml(Model.Sections)
+
 @Html.GetBlockListHtml(Model.OnatrixContact)

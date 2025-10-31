@@ -1,0 +1,49 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoAssignment.ViewModels
+@{
+    var content = (ContentModels.OurStorySection)Model.Content;
+
+
+}
+
+<section>
+    <div class="container" >
+
+        <div class="story-container">
+
+            <div class="aboslut story-bg">
+
+                @if (@content.StoryBgImg != null)
+                {
+                    <img class="hero-bg-img" src="@content.StoryBgImg.Url()" />
+                }
+
+            </div>
+
+            <div class="story-content">
+
+                    <div>
+                        <h2>@content.StoryLable</h2>
+                        <h3>@content.StorySubLable</h3>
+                    </div>
+
+                    <div>
+                        <p>@content.StoryText</p>
+                    </div>
+
+                    @if (content.StoryNav != null)
+                    {
+                        <div>
+                            <a class="btn btn-contact" href="@content.StoryNav.Url">@content.StoryNav.Name</a>
+
+                        </div>
+                    }
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

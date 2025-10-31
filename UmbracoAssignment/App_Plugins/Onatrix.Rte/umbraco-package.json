@@ -8,103 +8,618 @@
             "alias": "Onatrix.Tiptap.StyleMenu",
             "name": "Onatrix Tiptap Style Menu",
             "meta": {
-                "alias": "onatrixStyleMenu",
+                "alias": "OnatrixStyleMenu",
                 "icon": "icon-palette",
-                "label": "Onatrix styles"
+                "label": "Onatrix Styles"
             },
             "items": [
                 {
-                    "label": "Paragraphs",
+                    "label": "Headings",
                     "items": [
                         {
-                            "label": "Large / Regular",
-                            "data": {
-                                "tag": "p",
-                                "class": "rte-l rte-reg"
-                            }
+                            "label": "H1",
+                            "items": [
+                                {
+                                    "label": "XL - 70",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-xl rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-xl rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-xl rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "L - 40",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-lg rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-lg rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-lg rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "M - 20",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-md rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-md rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-md rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "S - 16",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-sm rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-sm rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-sm rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "XS - 14",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-xs rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-xs rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h1",
+                                                "class": "rte-h1 rte-text-xs rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
-                            "label": "Large / Semi-Bold",
-                            "data": {
-                                "tag": "p",
-                                "class": "rte-l rte-semi"
-                            }
+                            "label": "H2",
+                            "items": [
+                                {
+                                    "label": "XL - 70",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-xl rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-xl rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-xl rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "L - 40",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-lg rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-lg rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-lg rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "M - 20",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-md rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-md rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-md rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "S - 16",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-sm rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-sm rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-sm rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "XS - 14",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-xs rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-xs rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h2",
+                                                "class": "rte-h2 rte-text-xs rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
-                            "label": "Large / Bold",
-                            "data": {
-                                "tag": "p",
-                                "class": "rte-l rte-bold"
-                            }
-                        },
-                        {
-                            "label": "Medium / Regular",
-                            "data": {
-                                "tag": "p",
-                                "class": "rte-m rte-reg"
-                            }
-                        },
-                        {
-                            "label": "Medium / Semi-Bold",
-                            "data": {
-                                "tag": "p",
-                                "class": "rte-m rte-semi"
-                            }
-                        },
-                        {
-                            "label": "Medium / Bold",
-                            "data": {
-                                "tag": "p",
-                                "class": "rte-m rte-bold"
-                            }
-                        },
-                        {
-                            "label": "Small / Regular",
-                            "data": {
-                                "tag": "p",
-                                "class": "rte-s rte-reg"
-                            }
-                        },
-                        {
-                            "label": "Small / Semi-Bold",
-                            "data": {
-                                "tag": "p",
-                                "class": "rte-s rte-semi"
-                            }
-                        },
-                        {
-                            "label": "Small / Bold",
-                            "data": {
-                                "tag": "p",
-                                "class": "rte-s rte-bold"
-                            }
-                        },
-                        {
-                            "label": "— Reset paragraph —",
-                            "data": { "tag": "p" }
+                            "label": "H3",
+                            "items": [
+                                {
+                                    "label": "XL - 70",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-xl rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-xl rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-xl rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "L - 40",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-lg rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-lg rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-lg rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "M - 20",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-md rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-md rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-md rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "S - 16",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-sm rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-sm rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-sm rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "XS - 14",
+                                    "items": [
+                                        {
+                                            "label": "Light",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-xs rte-font-light"
+                                            }
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-xs rte-font-normal"
+                                            }
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "data": {
+                                                "tag": "h3",
+                                                "class": "rte-h3 rte-text-xs rte-font-bold"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "label": "Attributes",
+                    "label": "Paragraphs",
                     "items": [
                         {
-                            "label": "Add class .foo",
-                            "data": { "class": "foo" }
+                            "label": "XL - 70",
+                            "items": [
+                                {
+                                    "label": "Light",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-xl rte-font-light"
+                                    },
+                                    "appearance": {}
+                                },
+                                {
+                                    "label": "Normal",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-xl rte-font-normal"
+                                    },
+                                    "appearance": {}
+                                },
+                                {
+                                    "label": "Bold",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-xl rte-font-bold"
+                                    },
+                                    "appearance": {}
+                                }
+                            ]
                         },
                         {
-                            "label": "Set id #bar",
-                            "data": { "id": "bar" }
+                            "label": "L - 40",
+                            "items": [
+                                {
+                                    "label": "Light",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-lg rte-font-light"
+                                    }
+                                },
+                                {
+                                    "label": "Normal",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-lg rte-font-normal"
+                                    }
+                                },
+                                {
+                                    "label": "Bold",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-lg rte-font-bold"
+                                    }
+                                }
+                            ]
                         },
                         {
-                            "label": "Span .foo#bar",
-                            "data": {
-                                "tag": "span",
-                                "class": "foo",
-                                "id": "bar"
-                            }
+                            "label": "M - 20",
+                            "items": [
+                                {
+                                    "label": "Light",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-md rte-font-light"
+                                    }
+                                },
+                                {
+                                    "label": "Normal",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-md rte-font-normal"
+                                    }
+                                },
+                                {
+                                    "label": "Bold",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-md rte-font-bold"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "label": "S - 16",
+                            "items": [
+                                {
+                                    "label": "Light",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-sm rte-font-light"
+                                    }
+                                },
+                                {
+                                    "label": "Normal",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-sm rte-font-normal"
+                                    }
+                                },
+                                {
+                                    "label": "Bold",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-sm rte-font-bold"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "label": "XS - 14",
+                            "items": [
+                                {
+                                    "label": "Light",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-xs rte-font-light"
+                                    }
+                                },
+                                {
+                                    "label": "Normal",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-xs rte-font-normal"
+                                    }
+                                },
+                                {
+                                    "label": "Bold",
+                                    "data": {
+                                        "tag": "p",
+                                        "class": "rte-p rte-text-xs rte-font-bold"
+                                    }
+                                }
+                            ]
                         }
                     ]
+                },
+                {
+                    "label": "Bullets",
+                    "data": {
+                        "tag": "ul",
+                        "class": "rte-ul"
+                    }
+                },
+                {
+                    "label": "Images",
+                    "items": [
+                        {
+                            "label": "Full width",
+                            "data": { "class": "rte-img-full" }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "tiptapToolbarExtension",
+            "kind": "styleMenu",
+            "alias": "Onatrix.Tiptap.BrandColors",
+            "name": "Onatrix Brand Colors",
+            "meta": {
+                "alias": "onatrixBrandColors",
+                "label": "Onatrix Colors"
+            },
+            "items": [
+                {
+                    "label": "Primary",
+                    "data": {
+                        "tag": "span",
+                        "class": "text-primary"
+                    },
+                    "appearance": { "style": "background-color:#4F5955; color:#fff; padding:5px;" }
+                },
+                {
+                    "label": "Secondary",
+                    "data": {
+                        "tag": "span",
+                        "class": "text-secondary"
+                    },
+                    "appearance": { "style": "background-color:#D9C3A9; color:#fff; padding:5px;" }
+                },
+                {
+                    "label": "Body",
+                    "data": {
+                        "tag": "span",
+                        "class": "text-body-text"
+                    },
+                    "appearance": { "style": "background-color:#535656; color:#fff; padding:5px;" }
+                },
+                {
+                    "label": "Body-Light",
+                    "data": {
+                        "tag": "span",
+                        "class": "text-body-text-100"
+                    },
+                    "appearance": { "style": "background-color:#999999; color:#fff; padding:5px;" }
                 }
             ]
         }
