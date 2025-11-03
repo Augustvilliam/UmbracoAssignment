@@ -108,13 +108,25 @@ a:hover, button:hover{
 .rte {
     padding-bottom: 2rem;
 }
+.width-max{
+    width:100%;
+}
 footer{
     padding:1rem;
 }
-
-.container{
-    width:1200px;
-    margin:0 auto;
+.dex-deshawn{
+    font-size:100px;
+    font-family:700;
+    color:var(--clr-sub3)
+}
+.count-text{
+    font-size:18px;
+    font-weight:500;
+    color:var(--clr-white);
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
 }
 .hero-container{
     height:550px;
@@ -209,8 +221,14 @@ footer{
     height:100%;
     margin: 4rem 0;
 }
-.story-container{
-    height:100%;
+.succ-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    margin-top:7rem;
+    gap:2rem;
 }
 .review-body {
     align-content: center;
@@ -219,9 +237,18 @@ footer{
     flex-direction: column;
     gap: 2rem;
 }
+.succ-section{
+    height:1000px
+}
+.counter-list{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.green-earth {
+    height: 800px
+}
 
-.review-head{
-
+.review-head {
 }
 .stars{
 
@@ -299,6 +326,11 @@ footer{
     margin-top: 1.5rem;
 
     
+}
+.bg-img{
+    justify-content:center;
+    display:flex;
+    width:100svw;
 }
 .story-bg{
 }
@@ -513,9 +545,12 @@ footer{
 .story-content{
     display:flex;
     flex-direction:column;
-    height:1000px;
+    height:765px;
+    margin: 2rem auto 0rem auto;
     align-items:center;
-    justify-content:center;
+    gap:2rem;
+    text-align:center;
+    width:40%;
 }
 .card-grid {
     display: grid;

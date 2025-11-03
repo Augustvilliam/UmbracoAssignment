@@ -1,0 +1,56 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.SuccessSection)Model.Content;
+    var counterList = content.SucessCounterList;
+}
+
+<section class="succ-section">
+    <div>
+        @if (@content.SuccessBg != null)
+        {
+            <div class="bg-img">
+                <img class="hero-bg-img width-max green-earth" src="@content.SuccessBg.Url()" />
+        </div>
+        }
+
+        <div class="container succ-container">
+
+            <div class="counter-head">
+                <h3>
+                    @content.SuccessTitle
+
+                </h3>
+
+                <h2>
+                    @content.SuccessLable
+                </h2>
+            </div>
+
+            <div class="counter-list">
+
+                @if (counterList != null)
+                {
+                    for (var i = 0; i < counterList.Count; i++)
+                    {
+                        var counter = counterList[i];
+
+                        <div class="">
+                            <partial name="Partials/Blocklist/Components/SucessCounter" model="counter" />
+                        </div>
+                    }
+                }
+            </div>
+
+
+
+            @if (@content.SuccessImg != null)
+            {
+                <div>
+                    <img src="@content.SuccessImg.Url()" />
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
