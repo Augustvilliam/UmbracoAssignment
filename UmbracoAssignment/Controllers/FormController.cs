@@ -19,18 +19,59 @@ namespace UmbracoAssignment.Controllers
         {
             if (!ModelState.IsValid)
             {
+                TempData["CallbackFormError"] = "Please Submit a valid form.";
                 return CurrentUmbracoPage();
             }
 
-            var result = _formSubmissionsService.SaveCallbackRequest(model);
-            if (!result)
+            var ok = _formSubmissionsService.SaveCallbackRequest(model);
+
+            if (!ok)
             {
-                TempData["FormError"] = "There was an error submitting the form. Please try again.";
+                TempData["CallbackFormError"] = "There was an error submitting the form. Please try again.";
                 return RedirectToCurrentUmbracoPage();
             }
 
-            TempData["FormSuccess"] = "Thank you for your request! You will hear from us shortly!";
+            TempData["CallbackFormSuccess"] = "Thank you for your request! You will hear from us shortly!";
+            return RedirectToCurrentUmbracoPage();
+        }
 
+        public IActionResult HandleQuestionForm(QuestionFormViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                TempData["QuestionFormError"] = "Please Submit a valid form.";
+                return CurrentUmbracoPage();
+            }
+
+            var ok = _formSubmissionsService.SaveQuestionRequest(model);
+
+            if (!ok)
+            {
+                TempData["QuestionFormError"] = "There was an error submitting the form. Please try again.";
+                return RedirectToCurrentUmbracoPage();
+            }
+
+            TempData["QuestionFormSuccess"] = "Thank you for your request! You will hear from us shortly!";
+            return RedirectToCurrentUmbracoPage();
+        }
+
+        public IActionResult HandleSupportForm(SupportFormViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                TempData["SupportFormError"] = "Please Submit a valid form.";
+                return CurrentUmbracoPage();
+            }
+
+            var ok = _formSubmissionsService.SaveSupportRequest(model);
+
+            if (!ok)
+            {
+                TempData["SupportFormError"] = "There was an error submitting the form. Please try again.";
+                return RedirectToCurrentUmbracoPage();
+            }
+
+            TempData["SupportFormSuccess"] = "Thank you! Our support will contact you shortly.";
             return RedirectToCurrentUmbracoPage();
         }
     }

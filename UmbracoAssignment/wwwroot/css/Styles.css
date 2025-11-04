@@ -37,6 +37,10 @@ a:hover, button:hover{
     background-color:transparent;
     color:var(--clr-note)
 }
+.devider{
+    border-right:2px solid var(--clr-border);
+    margin:0 2rem;
+}
 :root {
     --clr-primary: #4F5955;
     --clr-sub1: #F2EDDC;
@@ -221,14 +225,19 @@ footer{
     height:100%;
     margin: 4rem 0;
 }
-.succ-container{
+.details-container{
     display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    margin-top:7rem;
-    gap:2rem;
+    flex-direction:row;
+    margin:4rem 0;
+}
+.succ-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 7rem;
+    gap: 2rem;
 }
 .review-body {
     align-content: center;

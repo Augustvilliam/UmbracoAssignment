@@ -33,16 +33,16 @@
             <div class="form-container">
                 <partial name="Partials/Forms/_CallbackForm" model="formViewModel" />
 
-                @if (TempData["FormSuccess"] != null)
+                @if (TempData["CallbackFormSuccess"] != null)
                 {
                     <div class="success-msg">
-                        @TempData["FormSuccess"]
+                        @TempData["CallbackFormSuccess"]
                     </div> 
                 }
-                else if (TempData["FormError"] != null)
+                else if (TempData["CallbackFormError"] != null)
                 {
                     <div class="error-msg">
-                        @TempData["FormError"]
+                        @TempData["CallbackFormError"]
                     </div>
                 }
 
