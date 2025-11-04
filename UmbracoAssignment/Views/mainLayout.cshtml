@@ -24,10 +24,12 @@
 
     <partial name="Partials/Layout/_Topbar" />
     <partial name="Partials/Layout/_Header" />
+
     @RenderBody()
+
     <partial name="Partials/Layout/_Footer" />
 
 	<script src="~/js/form.js"></script>
-
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -1,4 +1,5 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoAssignment.ViewModels
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ServiceDetail>
 @{
 	Layout = "mainLayout.cshtml";
@@ -7,21 +8,61 @@
 
 <section>
 	<div class="container">
-		<div>
+		<div class="details-container">
 			<aside>
 				@Html.GetBlockListHtml(Model.ServiceDetailsAsides)
+
+				<partial name="Partials/Forms/_SupportForm" model="new SupportFormViewModel()" />
+				@if (TempData["SupportFormSuccess"] != null)
+				{
+					<div class="success-msg">
+						@TempData["SupportFormSuccess"]
+					</div>
+				}
+				else if (TempData["SupportFormError"] != null)
+				{
+					<div class="error-msg">
+						@TempData["SupportFormError"]
+					</div>
+				}
 			</aside>
 
-			<div>Content HERE!!
+			<div class="devider"></div>
+
+
+			<div>
 				<div>
 					@Html.Raw(Model.ServiceDetalBody)
 				</div>
 			</div>
 
+		</div>
 
+		<div class="form-container">
+
+			<partial name="Partials/Forms/_QuestionForm" model="new QuestionFormViewModel()" />
+
+			@if (TempData["QuestionFormSuccess"] != null)
+			{
+				<div class="success-msg">
+					@TempData["QuestionFormSuccess"]
+				</div>
+			}
+			else if (TempData["QuestionFormError"] != null)
+			{
+				<div class="error-msg">
+					@TempData["QuestionFormError"]
+				</div>
+			}
 
 		</div>
+		
+
 	</div>
 </section>
 
 @Html.GetBlockListHtml(Model.ContactContent)
+
+@section Scripts {
+	<script src="~/js/supportForm.js" asp-append-version="true"></script>
+}

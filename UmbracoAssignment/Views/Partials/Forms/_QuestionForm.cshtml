@@ -1,0 +1,31 @@
+﻿@using UmbracoAssignment.ViewModels
+@model QuestionFormViewModel
+
+@using (Html.BeginUmbracoForm("HandleQuestionForm", "Form", FormMethod.Post, new { novalidate = "novalidate", id = "questionForm" }))
+{
+	<div class="form">
+		<h3>Have a question ?</h3>
+		<div>
+			<div>
+				<label class="sr-only" asp-for="Name" ></label>
+				<input asp-for="Name" placeholder="@Html.DisplayNameFor(x => x.Name)" type="text" />
+				<span asp-validation-for="Name"></span>
+			</div>
+
+			<div>
+				<label class="sr-only" asp-for="Email"></label>
+				<input asp-for="Email" placeholder="@Html.DisplayNameFor(x => x.Email)" type="text" />
+				<span asp-validation-for="Email"></span>
+			</div>
+
+			<div>
+				<label class="sr-only" asp-for="Question"></label>
+				<input asp-for="Question" placeholder="@Html.DisplayNameFor(x => x.Question)" type="text" />
+				<span asp-validation-for="Question"></span>
+			</div>
+
+			<button type="submit" class="btn btn-submit">Submit</button>
+		</div>
+	</div>
+
+}
