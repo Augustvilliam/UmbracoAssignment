@@ -9,22 +9,27 @@
 <section>
 	<div class="container">
 		<div class="details-container">
-			<aside>
-				@Html.GetBlockListHtml(Model.ServiceDetailsAsides)
+			<aside class="aside">
 
-				<partial name="Partials/Forms/_SupportForm" model="new SupportFormViewModel()" />
-				@if (TempData["SupportFormSuccess"] != null)
-				{
-					<div class="success-msg">
-						@TempData["SupportFormSuccess"]
-					</div>
-				}
-				else if (TempData["SupportFormError"] != null)
-				{
-					<div class="error-msg">
-						@TempData["SupportFormError"]
-					</div>
-				}
+				<div class="aside-group">
+					@Html.GetBlockListHtml(Model.ServiceDetailsAsides)
+
+					<partial name="Partials/Forms/_SupportForm" model="new SupportFormViewModel()" />
+					@if (TempData["SupportFormSuccess"] != null)
+					{
+						<div class="success-msg">
+							@TempData["SupportFormSuccess"]
+						</div>
+					}
+					else if (TempData["SupportFormError"] != null)
+					{
+						<div class="error-msg">
+							@TempData["SupportFormError"]
+						</div>
+					}
+
+				</div>
+				
 			</aside>
 
 			<div class="devider"></div>

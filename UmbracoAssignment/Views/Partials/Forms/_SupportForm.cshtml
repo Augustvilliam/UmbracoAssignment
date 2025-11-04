@@ -3,14 +3,14 @@
 
 @using (Html.BeginUmbracoForm("HandleSupportForm", "Form", FormMethod.Post, new { novalidate = "novalidate", id = "supportForm" }))
 {
-	<div class="form">
+	<div class="form support-form">
 		<h3>How can we help you?</h3>
 		<p>Online Support 24/7, we are here to help you</p>
 		<div>
 
 			<div>
 				<label class="sr-only" asp-for="Email"></label>
-				<input asp-for="Email" placeholder="@Html.DisplayNameFor(x => x.Email)" type="text" />
+				<input class="input" asp-for="Email" placeholder="@Html.DisplayNameFor(x => x.Email)" type="text" />
 				<span asp-validation-for="Email"></span>
 			</div>
 
