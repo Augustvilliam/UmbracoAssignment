@@ -5,7 +5,7 @@
     var counterList = content.SucessCounterList;
 }
 
-<section class="succ-section">
+<section class="succ-section bg-green">
     <div>
         @if (@content.SuccessBg != null)
         {
@@ -46,7 +46,7 @@
 
             @if (@content.SuccessImg != null)
             {
-                <div>
+                <div class="SucessImg">
                     <img src="@content.SuccessImg.Url()" />
                 </div>
             }
