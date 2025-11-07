@@ -23,7 +23,7 @@
 
 
 <header class="shadow">
-	<nav class="shadow">
+	<nav class="shadow nav-d">
 		<div class="container nav-container">
 			@if (logo != null)
 			{
@@ -55,5 +55,52 @@
 
 
 	</nav>
+
+	<div class="phone-nav">
+		<div>
+			<button type="button" class="nav-menu-btn">
+					<i class="fa-solid fa-bars"></i>
+			</button>
+		</div>
+
+		<nav class="shadow nav-phone">
+			<div class="container nav-container">
+				<div class="phone-nav-head">
+
+					@if (logo != null)
+					{
+						<a class="logo" href="/">
+							<img src="@logo.Url()" alt="Onatrix" />
+						</a>
+					}
+
+					else
+					{
+						<a href="/">Onatrix</a>
+					}
+
+				</div>
+
+
+				@if (selection?.Length > 0)
+				{
+					<ul class="Nav-list">
+						@foreach (var item in selection)
+						{
+							<li class="@(item.IsAncestorOrSelf(Model) ? "current" : null) list-item">
+								<a class="list-item" href="@item.Url(PublishedUrlProvider)">@item.Name</a>
+							</li>
+						}
+					</ul>
+				}
+
+				<div class="search">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</div>
+			</div>
+
+
+		</nav>
+	</div>
 </header>
 
