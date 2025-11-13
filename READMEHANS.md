@@ -3,6 +3,8 @@ Hej, god dag och hallå Hans!
 
 Här finns lite skräptext för dig att läsa igenom. 
 
+Inlogg finns enligt instruktioner på omniway
+
  lite reflektioner: dessa saker borde egentligen fått lite mer kärlek: 
  CSSen generellt. just nu är det en hel hög med en miljoners miljaders klasser som hade gått att undvika om jag bara tänkte till lite. men ack o ve.
  Containersklasser är den största boven, där jag egentligen bara borde haft en regel i en .container, och det borde vara maxbredd. men nu blev det inte så.
